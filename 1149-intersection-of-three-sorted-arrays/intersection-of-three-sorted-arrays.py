@@ -36,5 +36,5 @@ class Solution:
 
         # Better APPROACH
         import collections
-        return [k for k,v in collections.Counter(arr1 + arr2 + arr3).items() if v == 3]
+        return [key for key, value in collections.Counter(arr1 + arr2 + arr3).items() if value == 3]
         
