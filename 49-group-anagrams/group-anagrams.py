@@ -46,8 +46,8 @@ class Solution:
         # SECOND ATTEMPT
         result = {}
         sorted_strs = ["".join(sorted(i)) for i in strs]
-        print(sorted_strs)
-        print(strs)
+        # print(sorted_strs)
+        # print(strs)
 
         for i in range(len(sorted_strs)):
             if sorted_strs[i] not in result:
