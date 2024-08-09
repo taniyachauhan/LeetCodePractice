@@ -8,8 +8,8 @@ class Solution:
             r = n - 1
             while r > l and colors[l] == colors[r]:
                 r -= 1
-            if r > l:
-                max_dist = max(max_dist, r - l)
+            #if r > l:
+            max_dist = max(max_dist, r - l)
             l += 1
         
         return max_dist
