@@ -34,6 +34,10 @@ class Solution:
                     min_dic[k]=v
         return [key for key, value in min_dic.items() for num in range(value)]
 
+
+
+
+
             
 
 
