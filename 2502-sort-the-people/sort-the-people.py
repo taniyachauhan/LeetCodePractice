@@ -19,7 +19,7 @@ class Solution:
             res_dict[heights[i]] = names[i]
         sorted_keys = sorted(res_dict.keys(), reverse = True)
         print(sorted_keys)
-        return [res_dict[key] for key in sorted_keys]
+        # return [res_dict[key] for key in sorted_keys]
 
 
 
