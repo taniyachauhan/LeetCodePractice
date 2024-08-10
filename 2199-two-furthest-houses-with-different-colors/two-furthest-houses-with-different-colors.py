@@ -1,3 +1,4 @@
+@cache
 class Solution:
     def maxDistance(self, colors: List[int]) -> int:
         # max_dist = float("-inf")
