@@ -13,7 +13,7 @@ class Solution:
         # return False
 
 
-        # SECOND ATTEMPT
+        # SECOND ATTEMPT (using a 2 pointer approach)
         
         left = 0
         right = ceil(sqrt(c))
