@@ -1,3 +1,4 @@
+@cache
 # The isBadVersion API is already defined for you.
 # def isBadVersion(version: int) -> bool:
 
@@ -15,8 +16,12 @@ class Solution:
         #         l = mid-1
         #     elif isBadVersion(lst[mid]) == False:
         #         f = mid+1
+
+
+
         # Second Attempt
         # Factoring in all the possible values 
+
         l = 1
         r = n
 
