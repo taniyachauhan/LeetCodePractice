@@ -19,7 +19,7 @@ class Solution:
         # SECOND ATTEMPT USING sorting and stack or heap
 
         points.sort(key = lambda x:x[1])
-        print(points)
+
         count = 0
         i = 0
         while i < len(points):
@@ -29,7 +29,6 @@ class Solution:
             count += 1
 
             i = j
-        print(count)
         return count
             
 
