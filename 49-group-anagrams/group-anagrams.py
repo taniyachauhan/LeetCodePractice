@@ -54,7 +54,6 @@ class Solution:
                 result[sorted_strs[i]] = [strs[i]]
             else:
                 result[sorted_strs[i]].append(strs[i])
-        return (list(result.values()))
-            
+        return (list(result.values()))            
 
 
