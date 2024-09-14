@@ -8,7 +8,7 @@ class Solution:
             return [0,0]
         f = 0
         l = len(arr)-1
-        mid = 0
+        # mid = 0
 
         while f<=l:
             mid = (f+l)//2
