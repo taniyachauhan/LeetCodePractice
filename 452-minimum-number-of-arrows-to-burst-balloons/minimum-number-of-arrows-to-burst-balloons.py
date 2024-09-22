@@ -16,7 +16,7 @@ class Solution:
         #     j = i + 1
 
 
-        # SECOND ATTEMPT USING sorting and stack or heap
+        # SECOND ATTEMPT USING sorting and stack or a list
 
         points.sort(key = lambda x:x[1])
 
