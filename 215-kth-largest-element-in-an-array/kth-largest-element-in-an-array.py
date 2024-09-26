@@ -37,7 +37,7 @@ class Solution:
                 nums[i], pivot = pivot, nums[i]
 
             if p < k:
-                return quickSelect(l,p+1)
+                return quickSelect(l,p-1)
             elif p > k:
                 return quickSelect(p+1, r)
             else:
