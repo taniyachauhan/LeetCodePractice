@@ -16,9 +16,9 @@ class Solution:
                     p += 1
             nums[p], pivot = pivot, nums[p]
 
-            if p < k:
+            if p < k-1:
                 return quickSelect(l,p-1)
-            elif p > k:
+            elif p > k+1:
                 return quickSelect(p+1, r)
             else:
                 return nums[p]
