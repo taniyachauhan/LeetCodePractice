@@ -8,6 +8,7 @@ class Solution:
 
         # Without sorting solution (Using quick select)
         def quickSelect(l,r):
+            k=len(nums)-k
             pivot = nums[r]
             p = l
             for i in range(l,r):
@@ -16,9 +17,9 @@ class Solution:
                     p += 1
             nums[p], pivot = pivot, nums[p]
 
-            if p < k-1:
+            if p < k:
                 return quickSelect(l,p-1)
-            elif p > k+1:
+            elif p > k:
                 return quickSelect(p+1, r)
             else:
                 return nums[p]
