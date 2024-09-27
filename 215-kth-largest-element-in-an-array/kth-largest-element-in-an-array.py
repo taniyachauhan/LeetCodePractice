@@ -14,7 +14,7 @@ class Solution:
                 if nums[i] <= pivot:
                     nums[i], nums[p] = nums[p], nums[i]
                     p += 1
-                nums[i], pivot = pivot, nums[i]
+            nums[i], pivot = pivot, nums[i]
 
             if p < k:
                 return quickSelect(l,p-1)
