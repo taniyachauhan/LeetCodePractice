@@ -7,7 +7,7 @@
 class Solution:
     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
         if not root:
-            return 
+            return []
         
         queue = collections.deque()
         queue.append(root)
