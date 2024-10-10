@@ -23,6 +23,7 @@ class Solution:
         #         result.append(level)
         # return result
 
+        # SECOND ATTEMPT
         if not root:
             return 
         
@@ -35,7 +36,9 @@ class Solution:
                 node = queue.popleft()
                 if node:
                     level.append(node.val)
+                if node.left:
                     queue.append(node.left)
+                if node.right:
                     queue.append(node.right)
             if level:
                 result.append(level)
