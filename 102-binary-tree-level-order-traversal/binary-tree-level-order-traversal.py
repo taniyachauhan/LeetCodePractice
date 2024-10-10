@@ -34,8 +34,8 @@ class Solution:
             level = []
             for i in range(len(queue)):
                 node = queue.popleft()
-                if node:
-                    level.append(node.val)
+
+                level.append(node.val)
                 if node.left:
                     queue.append(node.left)
                 if node.right:
