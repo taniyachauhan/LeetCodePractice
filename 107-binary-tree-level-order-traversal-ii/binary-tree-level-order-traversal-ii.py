@@ -39,7 +39,9 @@ class Solution:
 
                 if node:
                     level.append(node.val)
+                if node.left:
                     queue.append(node.left)
+                if node.right:
                     queue.append(node.right)
 
             if level:
