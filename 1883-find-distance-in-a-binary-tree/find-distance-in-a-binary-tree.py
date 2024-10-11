@@ -28,7 +28,7 @@ class Solution:
         
         # Now trying to find the distance between the nodes using BFS again
         queue = collections.deque()
-        queue.append([p,0])
+        queue.append((p,0))
 
         visited = set([p])
 
