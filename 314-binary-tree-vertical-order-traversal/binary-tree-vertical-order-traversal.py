@@ -23,6 +23,28 @@ class Solution:
                     my_queue.append((node.right, col+1))
                 result.append((node.val, col))
 
+        # SECOND ATTEMPT
+
+        # queue = collections.deque()
+        # queue.append((root, 0))
+        # result = []
+        # while queue:
+        #     for i in range(len(queue)):
+        #         level=[]
+        #         node, column = queue.popleft()
+
+        #         if node.left:
+        #             queue.append((node.left, column-1))
+        #         if node.right:
+        #             queue.append((node.right, column+1))
+        #         level.append(node.val)
+
+        #     result.append(level)
+
+
+
+
+
 
         value_to_keys = {}
         for value, key in result:
