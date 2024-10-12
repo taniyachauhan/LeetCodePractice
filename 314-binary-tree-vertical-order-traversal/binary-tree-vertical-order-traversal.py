@@ -41,7 +41,7 @@ class Solution:
 
         # SECOND ATTEMPT
         if not root:
-            return []
+            return 
         queue = collections.deque()
         queue.append((root, 0))
         result = defaultdict(list)
