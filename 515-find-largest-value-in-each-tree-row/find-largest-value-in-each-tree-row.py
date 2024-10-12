@@ -33,20 +33,22 @@ class Solution:
         queue = collections.deque()
         queue.append(root)
         result = []
-        max_value = float('-inf')
 
         while queue:
+            max_value = float('-inf')
             for i in range(len(queue)):
 
                 node = queue.popleft()
+
                 max_value = max(max_value, node.val)
+                
                 if node.left:
                     queue.append(node.left)
                 if node.right:
                     queue.append(node.right)
-                
+           
             result.append(max_value)
-            max_value = float('-inf')
+            
         return result
                 
                 
