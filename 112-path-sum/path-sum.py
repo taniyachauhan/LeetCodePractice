@@ -26,7 +26,8 @@ class Solution:
             currSum += node.val
             if not node.left and not node.right:
                 return currSum == targetSum
-
+            # dfs(node.left, currSum)
+            # dfs(node.right, currSum)
             return dfs(node.left, currSum) or dfs(node.right, currSum)
         return dfs(root, 0) 
         
