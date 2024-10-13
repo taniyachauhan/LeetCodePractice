@@ -21,7 +21,7 @@ class Solution:
             return -1
         i=0
         while reader.get(i) < target:
-            i = 5+i
+            i = 2+i
 
         return binarySearch(self, i)
         
