@@ -54,7 +54,7 @@ class Solution:
 
         def dfs(node, path, target):
             if not node:
-                return 
+                return None
             
             path.append(node)
 
