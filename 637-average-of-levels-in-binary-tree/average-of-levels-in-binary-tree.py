@@ -20,7 +20,7 @@ class Solution:
                     queue.append(node.left)
                 if node.right:
                     queue.append(node.right)
-            result.append(sum(level)/len(level))
+            result.append(round(sum(level)/len(level),5))
         return result
             
         
