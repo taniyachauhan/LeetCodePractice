@@ -23,5 +23,5 @@ class Solution:
             result.append(round(sum(level)/len(level),5))
         return result
             
-        
+# A simple tree traversal question where you can move level wise and calculate the average rounded to 5 decimal places on every level
         
