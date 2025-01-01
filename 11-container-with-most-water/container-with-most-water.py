@@ -22,7 +22,7 @@ class Solution:
         max_area = float("-inf")
         
 
-        while i<j and j<len(height):
+        while i<j:
             if (j-i) * min(height[i], height[j]) > max_area:
                 max_area = (j-i) * min(height[i], height[j])
             if height[i] <= height[j]:
