@@ -7,10 +7,9 @@ class Solution:
             base = 1
             curr_num = 0
             if char == ']':
-                print(stack)
                 while stack[-1] != '[':
                     temp = stack.pop()+temp
-                    print(temp)
+
                 stack.pop()
                 while stack and stack[-1].isdigit():
                     curr_num = curr_num + int(stack[-1])*base
@@ -23,7 +22,7 @@ class Solution:
 
             else:
                 stack.append(char)
-        print(stack)
+
         return "".join(stack)
 
         
