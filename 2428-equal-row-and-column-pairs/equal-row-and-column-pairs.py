@@ -12,7 +12,7 @@ class Solution:
                 j += 1
             result.append(temp)
             i += 1
-        print(result)
+
         counter = 0
         for i in range(n):
             for j in range(n):
