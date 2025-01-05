@@ -27,8 +27,7 @@ class Solution:
                     stack.pop()
                     break
                 elif abs(asteroid) > abs(stack[-1]):
-                        stack.pop()
-                    
+                        stack.pop()     
             else:
                 stack.append(asteroid)
         return stack
