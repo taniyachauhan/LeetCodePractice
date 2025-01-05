@@ -17,23 +17,21 @@ class Solution:
 
         # SECOND ATTEMPT
 
-
-        stack =[]
+        stack = []
 
         for asteroid in asteroids:
-            while stack and stack[-1] > 0 and asteroid < 0:
-                top = stack.pop()
-                if abs(asteroid) > top:
-                    continue
-                elif abs(asteroid) == top:
+            while stack and asteroid < 0 and stack[-1] > 0:
+                if abs(asteroid) < abs(stack[-1]):
                     break
-                else:
-                    stack.append(top)
-                    break  
-            else:  
-                stack.append (asteroid)
+                elif abs(asteroid) == abs(stack[-1]):
+                    stack.pop()
+                    break
+                elif abs(asteroid) > abs(stack[-1]):
+                        stack.pop()
+                    
+            else:
+                stack.append(asteroid)
         return stack
-
 
 
 
