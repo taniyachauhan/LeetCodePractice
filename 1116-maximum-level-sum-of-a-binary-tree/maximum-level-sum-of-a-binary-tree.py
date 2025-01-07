@@ -31,24 +31,28 @@ class Solution:
 
         if not root:
             return
-        
         queue = collections.deque()
         queue.append((root, 1))
-        sum = 0 
         max_sum = float('-inf')
+        max_level = 1
         while queue:
+            temp_sum = 0
             for i in range(len(queue)):
                 node, level = queue.popleft()
-                sum += node.val
+                temp_sum += node.val
+
                 if node.left:
                     queue.append((node.left, level + 1))
                 if node.right:
                     queue.append((node.right, level + 1))
-            if sum > max_sum:
-                max_sum = sum
-                min_level = level
-            sum = 0 
-        return min_level
+            if temp_sum > max_sum:
+                max_sum = temp_sum
+                max_level = level
+        return max_level
+                
+
+
+
 
 
         
