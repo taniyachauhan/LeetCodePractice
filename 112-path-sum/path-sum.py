@@ -19,17 +19,17 @@ class Solution:
         # return hasLength(root, 0)
 
         # SECOND ATTEMPT
-        def dfs(node, currSum):
+        def dfs(node, currSum):  
             if not node:
-                return False
-            
+                return False   
             currSum += node.val
             if not node.left and not node.right:
-                return currSum == targetSum
-            # dfs(node.left, currSum)
-            # dfs(node.right, currSum)
+                if currSum == targetSum:
+                    return True
             return dfs(node.left, currSum) or dfs(node.right, currSum)
+
         return dfs(root, 0) 
+
         
 
         
