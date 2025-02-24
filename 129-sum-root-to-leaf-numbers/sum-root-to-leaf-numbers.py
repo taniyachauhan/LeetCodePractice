@@ -30,27 +30,19 @@ class Solution:
         # return sum(paths)
 
         # SECOND ATTEMPT
-        paths = []
+        # Using DFS TO FIND THE PATHS AND THEN ADDING THE NUMBERS FROM DIFFERENT PATHS
+        results = []
         def dfs(node, path):
             if not node:
-                return
-            path.append(node.val)
-
+                return 
+            path.append(str(node.val))
             if not node.left and not node.right:
-                paths.append(path[:])
-
-            dfs(node.left, path)
-            dfs(node.right, path)
-            path.pop()
+                results.append("".join(path))
+            dfs(node.left,path[:])
+            dfs(node.right, path[:])
         dfs(root, [])
-        sum = 0
-        for i in paths:
-            temp =""
-            for j in i:
-                temp += str(j)
-            sum += int(temp)
-            
-        return sum
+        return sum(int(i) for i in results)
+
 
 
 
