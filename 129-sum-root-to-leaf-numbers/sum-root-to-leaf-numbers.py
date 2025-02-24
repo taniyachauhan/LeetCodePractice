@@ -41,7 +41,7 @@ class Solution:
             dfs(node.left,path[:])
             dfs(node.right, path[:])
         dfs(root, [])
-        return sum(int(i) for i in results)
+        return sum(int(results) for results in results)
 
 
 
