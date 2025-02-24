@@ -30,21 +30,24 @@ class Solution:
         # return paths
 
         # SECOND ATTEMPT
-        paths = []
-        def dfs(node, currSum, path):
+        results = []
+        def dfs(node, path, sum):
             if not node:
                 return 
-            currSum += node.val
             path.append(node.val)
-            if not node.left and not node.right and currSum == targetSum:
-                paths.append(path[:])
-                
-            dfs(node.left, currSum, path)
-            dfs(node.right, currSum, path)
+            sum += node.val
+            if not node.left and not node.right:
+                if sum == targetSum:
+                    results.append(path[:])
+            dfs(node.left, path[:], sum)
+            dfs(node.right, path[:], sum)
+        dfs(root, [], 0)
+        return results
+            
 
-            path.pop()
-        dfs(root, 0,[])
-        return paths
+
+
+
 
                 
 
