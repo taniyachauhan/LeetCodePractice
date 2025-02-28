@@ -76,6 +76,7 @@ class Solution:
 
                 queue.append(node.right)
 
+        # Now calculating the distance by traversing the graph using BFS
 
         queue = collections.deque()
         queue.append((target.val,0))
