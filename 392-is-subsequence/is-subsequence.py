@@ -1,17 +1,18 @@
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
-        i=0
-        result = ""
-        for letter in s:
-            while i<len(t):
-                if letter == t[i]:
-                    result += t[i]
-                    i += 1
+        j=0
+        for i in range(len(s)):
+            while j<len(t):
+                if t[j] == s[i]:
+                    j+=1
                     break
-                else:
-                    i += 1
+                j += 1
+            else:
+                return False
+        return True
+            
 
-        return s == result 
+
             
 
         
